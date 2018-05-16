@@ -13,7 +13,7 @@ import java.util.*
  * Created by frup66058 on 14/05/2018.
  * Expandable FAB
  */
-open abstract class ExpandableFab<T : ViewGroup>(context: Context, attributeSet: AttributeSet) : LinearLayout(context, attributeSet) {
+abstract class ExpandableFab<T : ViewGroup>(context: Context, attributeSet: AttributeSet) : LinearLayout(context, attributeSet) {
 
     interface Listener {
         fun onOptionClicked(o: Option)
