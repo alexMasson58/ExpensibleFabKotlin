@@ -16,7 +16,7 @@ class GridExpendableFab(context: Context, attributeSet: AttributeSet) : Expandab
     override fun doNonGenericDraw() {
         when {
             open -> {
-                val padding = context.resources.getDimension(R.dimen.fab_margin).toInt()
+                val padding = context.resources.getDimension(R.dimen.expfab_margin).toInt()
                 getContentLayout().setPadding(padding, padding, padding, padding)
             }
             else -> {
@@ -40,8 +40,8 @@ class GridExpendableFab(context: Context, attributeSet: AttributeSet) : Expandab
         getContentLayout().setColumnCount(column)
         getContentLayout().setRowCount(row + 1)
         val params = LinearLayout.LayoutParams(
-                context.resources.getDimension(R.dimen.fab_icon_size).toInt(),
-                context.resources.getDimension(R.dimen.fab_icon_size).toInt())
+                context.resources.getDimension(R.dimen.expfab_icon_size).toInt(),
+                context.resources.getDimension(R.dimen.expfab_icon_size).toInt())
         options.forEach {
             val v = ImageView(context)
             v.setImageDrawable(context.getDrawable(it.iconId))
@@ -54,14 +54,14 @@ class GridExpendableFab(context: Context, attributeSet: AttributeSet) : Expandab
         optionsViews.forEachIndexed { index, view ->
             getContentLayout().addView(view)
             var param = GridLayout.LayoutParams()
-            param.height = context.resources.getDimension(R.dimen.fab_icon_size).toInt()
-            param.width = context.resources.getDimension(R.dimen.fab_icon_size).toInt()
-            param.marginStart = context.resources.getDimension(R.dimen.fab_margin).toInt()
-            param.marginEnd = context.resources.getDimension(R.dimen.fab_margin).toInt()
-            param.topMargin = context.resources.getDimension(R.dimen.fab_margin).toInt()
-            param.bottomMargin = context.resources.getDimension(R.dimen.fab_margin).toInt()
-            param.leftMargin = context.resources.getDimension(R.dimen.fab_margin).toInt()
-            param.rightMargin = context.resources.getDimension(R.dimen.fab_margin).toInt()
+            param.height = context.resources.getDimension(R.dimen.expfab_icon_size).toInt()
+            param.width = context.resources.getDimension(R.dimen.expfab_icon_size).toInt()
+            param.marginStart = context.resources.getDimension(R.dimen.expfab_margin).toInt()
+            param.marginEnd = context.resources.getDimension(R.dimen.expfab_margin).toInt()
+            param.topMargin = context.resources.getDimension(R.dimen.expfab_margin).toInt()
+            param.bottomMargin = context.resources.getDimension(R.dimen.expfab_margin).toInt()
+            param.leftMargin = context.resources.getDimension(R.dimen.expfab_margin).toInt()
+            param.rightMargin = context.resources.getDimension(R.dimen.expfab_margin).toInt()
             param.setGravity(Gravity.CENTER)
             param.columnSpec = GridLayout.spec((index / column) + index % column)
             param.rowSpec = GridLayout.spec(index / column)

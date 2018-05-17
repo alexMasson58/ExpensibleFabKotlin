@@ -16,7 +16,7 @@ public class ExpandableFabFlo(context: Context, attributeSet: AttributeSet) : Fr
 
     internal val options = mutableListOf<Option>()
     internal val optionWidth: Int by lazy {
-        context.resources.getDimensionPixelOffset(R.dimen.fab_size)
+        context.resources.getDimensionPixelOffset(R.dimen.expfab_size)
     }
 
     //region shape

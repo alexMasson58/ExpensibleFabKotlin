@@ -43,7 +43,7 @@ abstract class ExpandableFab<T : ViewGroup>(context: Context, attributeSet: Attr
                 open -> {
                     //nonGenreicLogicHere
 
-                    val padding = context.resources.getDimension(R.dimen.fab_margin).toInt()
+                    val padding = context.resources.getDimension(R.dimen.expfab_margin).toInt()
                     getContentLayout().setPadding(padding, padding, padding, padding)
                     optionsViews.forEachIndexed { index, imageView ->
                         imageView.visibility = View.VISIBLE

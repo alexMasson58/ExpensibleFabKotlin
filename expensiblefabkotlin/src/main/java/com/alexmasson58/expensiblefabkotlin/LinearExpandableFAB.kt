@@ -2,6 +2,7 @@ package com.alexmasson58.expensiblefabkotlin
 
 import android.content.Context
 import android.util.AttributeSet
+import android.view.Gravity
 import android.view.View
 import android.widget.ImageView
 import android.widget.LinearLayout
@@ -42,7 +43,7 @@ class LinearExpandableFAB(context: Context, attributeSet: AttributeSet) : Expand
 
     override fun loadContent() {
 
-        View.inflate(context, R.layout.expandable_fab, this) // your layout with <merge> as the root tag
+        View.inflate(context, R.layout.expandable_fab_linear, this) // your layout with <merge> as the root tag
         content = findViewById(R.id.content)
 
     }
@@ -52,16 +53,18 @@ class LinearExpandableFAB(context: Context, attributeSet: AttributeSet) : Expand
 
         //créer les view
         layoutParamOpen = LinearLayout.LayoutParams(
-                context.resources.getDimension(R.dimen.fab_icon_size).toInt(),
-                context.resources.getDimension(R.dimen.fab_icon_size).toInt())
-        layoutParamOpen.marginStart = context.resources.getDimension(R.dimen.fab_margin).toInt()
-        layoutParamOpen.marginEnd = context.resources.getDimension(R.dimen.fab_margin).toInt()
+                context.resources.getDimension(R.dimen.expfab_icon_size).toInt(),
+                context.resources.getDimension(R.dimen.expfab_icon_size).toInt())
+        layoutParamOpen.marginStart = context.resources.getDimension(R.dimen.expfab_margin).toInt()
+        layoutParamOpen.marginEnd = context.resources.getDimension(R.dimen.expfab_margin).toInt()
+        layoutParamOpen.gravity = Gravity.CENTER
 
         layoutParamClose = LinearLayout.LayoutParams(
-                context.resources.getDimension(R.dimen.fab_icon_size).toInt(),
-                context.resources.getDimension(R.dimen.fab_icon_size).toInt())
+                context.resources.getDimension(R.dimen.expfab_icon_size).toInt(),
+                context.resources.getDimension(R.dimen.expfab_icon_size).toInt())
         layoutParamClose.marginStart = 0
         layoutParamClose.marginEnd = 0
+        layoutParamClose.gravity = Gravity.CENTER
 
         options.forEach {
             val v = ImageView(context)
