@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?><!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/content"
     android:layout_width="wrap_content"
     android:layout_height="@dimen/expfab_size"
@@ -10,18 +9,19 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
 
 
-android:layout_width="wrap_content"
-android:layout_height="@dimen/expfab_size"
-android:minWidth="@dimen/expfab_size"
-
-android:orientation="horizontal">
-
-<LinearLayout
-    android:id="@+id/content"
     android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_centerInParent="true"
-    android:columnCount="4"
-    android:orientation="horizontal"></LinearLayout>
+    android:layout_height="@dimen/expfab_size"
+    android:minWidth="@dimen/expfab_size"
+
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:id="@+id/content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:animateLayoutChanges="true"
+        android:columnCount="4"
+        android:orientation="horizontal"></LinearLayout>
 
 </RelativeLayout>

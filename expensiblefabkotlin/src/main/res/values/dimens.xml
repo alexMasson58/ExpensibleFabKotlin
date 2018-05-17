@@ -2,7 +2,7 @@
 <resources>
 
     <dimen name="expfab_margin">8dp</dimen>
-    <dimen name="expfab_size">64dp</dimen>
-    <dimen name="expfab_icon_size">32dp</dimen>
+    <dimen name="expfab_size">48dp</dimen>
+    <dimen name="expfab_icon_size">24dp</dimen>
     <dimen name="expfab_rad">24dp</dimen>
 </resources>
