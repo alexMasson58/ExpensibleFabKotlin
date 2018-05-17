@@ -4,19 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#CCCCCC"
+    android:background="#CCCCCC">
 
-    tools:context="com.alexmasson58.expensiblefabexample.MainActivity">
-
-    <com.alexmasson58.expensiblefabkotlin.GridExpendableFab
-        android:id="@+id/grid"
-        android:layout_width="wrap_content"
+    <com.alexmasson58.expensiblefabkotlin.ExpandableFabFlo
+        android:id="@+id/flo"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-
-        app:layout_constraintBottom_toTopOf="@+id/linear"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
 
     <com.alexmasson58.expensiblefabkotlin.LinearExpandableFAB
         android:id="@+id/linear"
@@ -25,7 +22,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/grid" />
+        app:layout_constraintTop_toBottomOf="@+id/flo" />
 
 
 </android.support.constraint.ConstraintLayout>
