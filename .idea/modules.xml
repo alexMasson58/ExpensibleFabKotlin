@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/ExpensibleFabKotlin.iml" filepath="$PROJECT_DIR$/ExpensibleFabKotlin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ExpensibleFabExample.iml" filepath="$PROJECT_DIR$/ExpensibleFabExample.iml" />
+      <module fileurl="file://C:\Projets\ExpensibleFabExample\ExpensibleFabKotlin.iml" filepath="C:\Projets\ExpensibleFabExample\ExpensibleFabKotlin.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/expensiblefabkotlin/expensiblefabkotlin.iml" filepath="$PROJECT_DIR$/expensiblefabkotlin/expensiblefabkotlin.iml" />
     </modules>

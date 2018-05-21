@@ -6,7 +6,7 @@ ext {
     // compile '<groupId>:<artifactId>:<libVersion>'
     groupId = 'com.alexmasson58.expensiblefabkotlin' // package name of the project
     artifactId = "expensiblefabkotlin" // module name of the library
-    libVersion = "1.0.1"
+    libVersion = "1.0.2"
 }
 version = libVersion
 group = groupId
@@ -21,7 +21,7 @@ bintray {
     // package already exists. In that case, there's no need to configure the other package
     // properties (like userOrg, desc, etc).
     pkg {
-        repo = "expensiblefabkotlin" //bintray repo
+        repo = "maven" //bintray repo
         name = "expensiblefabkotlin" //bintray package
         version {
             name = libVersion
@@ -47,19 +47,19 @@ if (project.hasProperty("kotlin")) { //Kotlin libraries
         from android.sourceSets.main.java.srcDirs
     }
 
-    task javadoc(type: Javadoc, dependsOn: dokka) {
+    /*task javadoc(type: Javadoc, dependsOn: dokka) {
 
-    }
+    }*/
 } else if (project.hasProperty("android")) {
     task sourcesJar(type: Jar) {
         classifier = 'sources'
         from android.sourceSets.main.java.srcDirs
     }
 
-    task javadoc(type: Javadoc) {
+   /* task javadoc(type: Javadoc) {
         source = android.sourceSets.main.java.srcDirs
         classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
-    }
+    }*/
 } else { // Java libraries
     task sourcesJar(type: Jar, dependsOn: classes) {
         classifier = 'sources'
@@ -67,13 +67,13 @@ if (project.hasProperty("kotlin")) { //Kotlin libraries
     }
 }
 
-task javadocJar(type: Jar, dependsOn: javadoc) {
+/*task javadocJar(type: Jar, dependsOn: javadoc) {
     classifier = 'javadoc'
     from javadoc.destinationDir
     // options.encoding = 'UTF-8'
-}
+}*/
 
 artifacts {
-    archives javadocJar
+   /* archives javadocJar*/
     archives sourcesJar
 }

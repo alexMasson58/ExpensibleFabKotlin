@@ -30,16 +30,20 @@ class LinearExpandableFAB(context: Context, attributeSet: AttributeSet) : Expand
                     optionsViews.forEach {
                         it.layoutParams = layoutParamOpen
                     }
+
                 }
                 else -> {
                     optionsViews.forEach {
                         it.layoutParams = layoutParamClose
                     }
+
                 }
             }
 
         }
     }
+
+
 
     override fun loadContent() {
 
@@ -79,7 +83,7 @@ class LinearExpandableFAB(context: Context, attributeSet: AttributeSet) : Expand
             getContentLayout().addView(view)
             view.setOnClickListener {
                 selectedIndex = index
-                open = !open
+                switchOpen()
                 if (listener != null) {
                     listener!!.onOptionClicked(options[index])
                 }

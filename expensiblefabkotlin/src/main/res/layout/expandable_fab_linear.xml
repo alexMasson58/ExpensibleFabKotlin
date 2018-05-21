@@ -11,8 +11,10 @@
 
     android:layout_width="wrap_content"
     android:layout_height="@dimen/expfab_size"
-    android:minWidth="@dimen/expfab_size"
+    android:background="@drawable/roundrect"
 
+    android:minWidth="@dimen/expfab_size"
+    android:minHeight="@dimen/expfab_size"
     android:orientation="horizontal">
 
     <LinearLayout
@@ -21,7 +23,6 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:animateLayoutChanges="true"
-        android:columnCount="4"
         android:orientation="horizontal"></LinearLayout>
 
 </RelativeLayout>

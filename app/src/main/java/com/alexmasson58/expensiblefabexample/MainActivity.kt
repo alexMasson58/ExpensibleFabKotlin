@@ -15,9 +15,15 @@ class MainActivity : AppCompatActivity(), ExpandableFab.Listener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        listOf(linear).forEach {
+        listOf(linear, grid).forEach {
             //it.listener = this
             it.setOptions(
+                    ExpandableFab.Option(R.drawable.ic_baseline_add_24px, { Toast.makeText(this@MainActivity, "add", Toast.LENGTH_SHORT).show() }),
+                    ExpandableFab.Option(R.drawable.ic_baseline_edit_24px, { Toast.makeText(this@MainActivity, "edit", Toast.LENGTH_SHORT).show() }),
+                    ExpandableFab.Option(R.drawable.ic_baseline_add_24px, { Toast.makeText(this@MainActivity, "add", Toast.LENGTH_SHORT).show() }),
+                    ExpandableFab.Option(R.drawable.ic_baseline_add_24px, { Toast.makeText(this@MainActivity, "add", Toast.LENGTH_SHORT).show() }),
+                    ExpandableFab.Option(R.drawable.ic_baseline_edit_24px, { Toast.makeText(this@MainActivity, "edit", Toast.LENGTH_SHORT).show() }),
+                    ExpandableFab.Option(R.drawable.ic_baseline_add_24px, { Toast.makeText(this@MainActivity, "add", Toast.LENGTH_SHORT).show() }),
                     ExpandableFab.Option(R.drawable.ic_baseline_add_24px, { Toast.makeText(this@MainActivity, "add", Toast.LENGTH_SHORT).show() }),
                     ExpandableFab.Option(R.drawable.ic_baseline_edit_24px, { Toast.makeText(this@MainActivity, "edit", Toast.LENGTH_SHORT).show() }),
                     ExpandableFab.Option(R.drawable.ic_baseline_add_24px, { Toast.makeText(this@MainActivity, "add", Toast.LENGTH_SHORT).show() }),

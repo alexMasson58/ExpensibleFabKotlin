@@ -18,9 +18,11 @@ class GridExpendableFab(context: Context, attributeSet: AttributeSet) : Expandab
             open -> {
                 val padding = context.resources.getDimension(R.dimen.expfab_margin).toInt()
                 getContentLayout().setPadding(padding, padding, padding, padding)
+
             }
             else -> {
                 getContentLayout().setPadding(0, 0, 0, 0)
+
             }
         }
     }
@@ -36,7 +38,7 @@ class GridExpendableFab(context: Context, attributeSet: AttributeSet) : Expandab
         val total = options.size
         val column = 4
         val row = total / column
-        getContentLayout().setAlignmentMode(GridLayout.ALIGN_BOUNDS)
+        getContentLayout().setAlignmentMode(GridLayout.ALIGN_MARGINS)
         getContentLayout().setColumnCount(column)
         getContentLayout().setRowCount(row + 1)
         val params = LinearLayout.LayoutParams(
@@ -53,21 +55,22 @@ class GridExpendableFab(context: Context, attributeSet: AttributeSet) : Expandab
         //ajouter des listener
         optionsViews.forEachIndexed { index, view ->
             getContentLayout().addView(view)
-            var param = GridLayout.LayoutParams()
-            param.height = context.resources.getDimension(R.dimen.expfab_icon_size).toInt()
-            param.width = context.resources.getDimension(R.dimen.expfab_icon_size).toInt()
-            param.marginStart = context.resources.getDimension(R.dimen.expfab_margin).toInt()
-            param.marginEnd = context.resources.getDimension(R.dimen.expfab_margin).toInt()
-            param.topMargin = context.resources.getDimension(R.dimen.expfab_margin).toInt()
-            param.bottomMargin = context.resources.getDimension(R.dimen.expfab_margin).toInt()
-            param.leftMargin = context.resources.getDimension(R.dimen.expfab_margin).toInt()
-            param.rightMargin = context.resources.getDimension(R.dimen.expfab_margin).toInt()
-            param.setGravity(Gravity.CENTER)
-            param.columnSpec = GridLayout.spec((index / column) + index % column)
-            param.rowSpec = GridLayout.spec(index / column)
+            /*  val param = GridLayout.LayoutParams()
+              param.height = context.resources.getDimension(R.dimen.expfab_icon_size).toInt()
+              param.width = context.resources.getDimension(R.dimen.expfab_icon_size).toInt()
+              param.marginStart = context.resources.getDimension(R.dimen.expfab_margin).toInt()
+              param.marginEnd = context.resources.getDimension(R.dimen.expfab_margin).toInt()
+              param.topMargin = context.resources.getDimension(R.dimen.expfab_margin).toInt()
+              param.bottomMargin = context.resources.getDimension(R.dimen.expfab_margin).toInt()
+              param.leftMargin = context.resources.getDimension(R.dimen.expfab_margin).toInt()
+              param.rightMargin = context.resources.getDimension(R.dimen.expfab_margin).toInt()
+              param.setGravity(Gravity.CENTER)
+              param.columnSpec = GridLayout.spec((index / column) + index % column)
+              param.rowSpec = GridLayout.spec(index / column)*/
+
             view.setOnClickListener {
                 selectedIndex = index
-                open = !open
+                switchOpen()
                 if (listener != null) {
                     listener!!.onOptionClicked(options[index])
                 }
