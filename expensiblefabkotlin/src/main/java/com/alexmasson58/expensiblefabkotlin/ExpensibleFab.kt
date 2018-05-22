@@ -13,7 +13,7 @@ import java.util.*
  * Created by frup66058 on 14/05/2018.
  * Expandable FAB
  */
-abstract class ExpandableFab<T : ViewGroup>(context: Context, attributeSet: AttributeSet) : LinearLayout(context, attributeSet) {
+abstract class ExpensibleFab<T : ViewGroup>(context: Context, attributeSet: AttributeSet) : LinearLayout(context, attributeSet) {
 
 
     interface Listener {
@@ -104,12 +104,12 @@ abstract class ExpandableFab<T : ViewGroup>(context: Context, attributeSet: Attr
 
     abstract fun doNonGenericDraw()
 
-    private fun collapse() {
+    fun collapse() {
         open = false
         draw()
     }
 
-    private fun expand() {
+    fun expand() {
         open = true
 
         draw()

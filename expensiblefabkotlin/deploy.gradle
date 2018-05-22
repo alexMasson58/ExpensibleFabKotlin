@@ -6,7 +6,7 @@ ext {
     // compile '<groupId>:<artifactId>:<libVersion>'
     groupId = 'com.alexmasson58.expensiblefabkotlin' // package name of the project
     artifactId = "expensiblefabkotlin" // module name of the library
-    libVersion = "1.0.2"
+    libVersion = "1.0.4"
 }
 version = libVersion
 group = groupId

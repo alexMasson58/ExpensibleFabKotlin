@@ -12,7 +12,11 @@ import android.widget.LinearLayout
 import com.github.florent37.mylittlecanvas.animation.ShapeAnimator
 import com.github.florent37.mylittlecanvas.shape.RectShape
 
-public class ExpandableFabFlo(context: Context, attributeSet: AttributeSet) : FrameLayout(context, attributeSet) {
+
+/**
+ * created by florent37, implementation with his lib littleCanvas
+ */
+public class ExpensibleFabCanvas(context: Context, attributeSet: AttributeSet) : FrameLayout(context, attributeSet) {
 
     internal val options = mutableListOf<Option>()
     internal val optionWidth: Int by lazy {
@@ -30,7 +34,7 @@ public class ExpandableFabFlo(context: Context, attributeSet: AttributeSet) : Fr
 
     internal val content = LinearLayout(context).apply {
         orientation = LinearLayout.HORIZONTAL
-        this@ExpandableFabFlo.addView(this)
+        this@ExpensibleFabCanvas.addView(this)
     }
     internal val optionsViews = mutableListOf<View>()
 
@@ -99,7 +103,7 @@ public class ExpandableFabFlo(context: Context, attributeSet: AttributeSet) : Fr
         this.options.clear()
         this.options.addAll(options)
         this.options.forEach { option ->
-            content.addView(LayoutInflater.from(context).inflate(R.layout.expandable_item, content, false).apply {
+            content.addView(LayoutInflater.from(context).inflate(R.layout.expensible_item, content, false).apply {
                 optionsViews.add(this)
                 findViewById<ImageView>(R.id.image).apply {
                     setImageResource(option.iconId)

@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="#CCCCCC">
 
-    <com.alexmasson58.expensiblefabkotlin.ExpandableFabFlo
+    <com.alexmasson58.expensiblefabkotlin.ExpensibleFabCanvas
         android:id="@+id/flo"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -14,7 +14,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <com.alexmasson58.expensiblefabkotlin.LinearExpandableFAB
+    <com.alexmasson58.expensiblefabkotlin.LinearExpensibleFAB
         android:id="@+id/linear"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -25,7 +25,7 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/flo" />
 
-    <com.alexmasson58.expensiblefabkotlin.GridExpendableFab
+    <com.alexmasson58.expensiblefabkotlin.GridExpensibleFab
         android:id="@+id/grid"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

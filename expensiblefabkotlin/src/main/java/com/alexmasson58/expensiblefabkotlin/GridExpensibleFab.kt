@@ -2,7 +2,6 @@ package com.alexmasson58.expensiblefabkotlin
 
 import android.content.Context
 import android.util.AttributeSet
-import android.view.Gravity
 import android.view.View
 import android.widget.GridLayout
 import android.widget.ImageView
@@ -12,7 +11,7 @@ import android.widget.LinearLayout
 /**
  * Created by frup66058 on 16/05/2018.
  */
-class GridExpendableFab(context: Context, attributeSet: AttributeSet) : ExpandableFab<GridLayout>(context, attributeSet) {
+class GridExpensibleFab(context: Context, attributeSet: AttributeSet) : ExpensibleFab<GridLayout>(context, attributeSet) {
     override fun doNonGenericDraw() {
         when {
             open -> {
@@ -28,7 +27,7 @@ class GridExpendableFab(context: Context, attributeSet: AttributeSet) : Expandab
     }
 
     override fun loadContent() {
-        View.inflate(context, R.layout.expandable_fab_grid, this) // your layout with <merge> as the root tag
+        View.inflate(context, R.layout.expensible_fab_grid, this) // your layout with <merge> as the root tag
         content = findViewById(R.id.content)
     }
 

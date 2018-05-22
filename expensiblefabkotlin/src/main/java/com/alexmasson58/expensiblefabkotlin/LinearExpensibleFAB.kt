@@ -10,7 +10,7 @@ import android.widget.LinearLayout
 /**
  * Created by frup66058 on 16/05/2018.
  */
-class LinearExpandableFAB(context: Context, attributeSet: AttributeSet) : ExpandableFab<LinearLayout>(context, attributeSet) {
+class LinearExpensibleFAB(context: Context, attributeSet: AttributeSet) : ExpensibleFab<LinearLayout>(context, attributeSet) {
     private lateinit var layoutParamOpen: LayoutParams
     private lateinit var layoutParamClose: LayoutParams
 
@@ -47,7 +47,7 @@ class LinearExpandableFAB(context: Context, attributeSet: AttributeSet) : Expand
 
     override fun loadContent() {
 
-        View.inflate(context, R.layout.expandable_fab_linear, this) // your layout with <merge> as the root tag
+        View.inflate(context, R.layout.expensible_fab_linear, this) // your layout with <merge> as the root tag
         content = findViewById(R.id.content)
 
     }
