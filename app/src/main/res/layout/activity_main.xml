@@ -1,39 +1,132 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#CCCCCC">
+
+
+    <TextView
+        android:id="@+id/tvFlo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="Florent37 implementation with Canvas"
+        android:textSize="11sp"
+
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+
+        />
 
     <com.alexmasson58.expensiblefabkotlin.ExpensibleFabCanvas
         android:id="@+id/flo"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/tvLinear"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/tvFlo" />
+
+    <TextView
+        android:id="@+id/tvLinear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="LinearExpensible"
+        android:textSize="11sp"
+
+        app:layout_constraintBottom_toTopOf="@+id/linear"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/flo"
+
+        />
 
     <com.alexmasson58.expensiblefabkotlin.LinearExpensibleFAB
         android:id="@+id/linear"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:exp_fab_closed_icon="@drawable/ic_baseline_cake_24px"
 
-        app:layout_constraintBottom_toTopOf="@+id/grid"
+        app:layout_constraintBottom_toTopOf="@+id/tvGrid"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/flo" />
+        app:layout_constraintTop_toBottomOf="@+id/tvLinear" />
+
+
+    <TextView
+        android:id="@+id/tvGrid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="GridExpensible"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toTopOf="@+id/grid"
+
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linear" />
 
     <com.alexmasson58.expensiblefabkotlin.GridExpensibleFab
         android:id="@+id/grid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/tvClosedIcon"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvGrid" />
+
+    <TextView
+        android:id="@+id/tvClosedIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="ClosedIcon"
+        android:textSize="11sp"
+
+        app:layout_constraintBottom_toTopOf="@+id/closedIcon"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/grid"
+
+        />
+
+    <com.alexmasson58.expensiblefabkotlin.LinearExpensibleFAB
+        android:id="@+id/closedIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:exp_fab_closed_icon="@drawable/ic_baseline_cake_24px"
+        app:layout_constraintBottom_toTopOf="@+id/tvautoclosefalse"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvClosedIcon" />
+
+    <TextView
+        android:id="@+id/tvautoclosefalse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="!autoclose"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toTopOf="@+id/notautoclose"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/closedIcon"
+
+
+        />
+
+    <com.alexmasson58.expensiblefabkotlin.LinearExpensibleFAB
+        android:id="@+id/notautoclose"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:exp_fab_autoclose="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linear" />
+        app:layout_constraintTop_toBottomOf="@+id/tvautoclosefalse" />
 
 
 </android.support.constraint.ConstraintLayout>
